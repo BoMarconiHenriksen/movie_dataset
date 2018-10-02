@@ -5,11 +5,12 @@ get the right data for each task.
 
 import csv
 
+
 #must_have == dictionary of items each line must contain
 #cant_have == dictionary of items each line must not contain
 def load_movie_data(file_name, must_have, cant_have):
     raw_data = []
-    with open(file_name) as fp:
+    with open(file_name, encoding='utf8') as fp:
         reader = csv.reader(fp)
         raw_data = list(reader)
 
