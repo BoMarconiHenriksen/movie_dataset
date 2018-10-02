@@ -13,6 +13,8 @@ https://github.com/MikkelHansen95/dataset
 - [ ] Which english action movie had the biggest revenue?  
 
 - [ ] Plot histogram with number of movies according to release day for 'adult' and 'non adult' movies.  
+x-axis: release date (day/month)  
+y-axis: number of movies   
 
 - [ ] Scatter-Plot with runtime as y value and release date as x value.  
 x-axis: runtime  
