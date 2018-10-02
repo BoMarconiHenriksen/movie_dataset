@@ -44,13 +44,3 @@ if __name__ == '__main__':
                 print(__doc__)
                 sys.exit(1)
     download(url, file_name)
-
-    #print(sys.argv)
-    #study_in_scarlet_url = 'https://www.gutenberg.org/files/244/244-0.txt'
-    #file_name = 'study_in_scarlet.txt'
-    #download(study_in_scarlet_url, file_name)
-    print(sys.argv)
-    befolkningkbh_url= 'https://data.kk.dk/dataset/76ecf368-bf2d-46a2-bcf8-adaf37662528/resource/9286af17-f74e-46c9-a428-9fb707542189/download/befkbhalderstatkode.csv'
-    file_name = 'befolkningkbh.txt'
-    download(befolkningkbh_url,file_name)
-    
