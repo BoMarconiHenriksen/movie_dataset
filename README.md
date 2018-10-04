@@ -19,6 +19,7 @@ x-axis: release date (day/month)
 y-axis: number of movies   
 
 - [ ] Scatter-Plot with runtime as y value and release date as x value.  
+Vi mangler kun plottet!  
 Plot via dataframe.  
 x-axis: runtime  
 y-axis: relase date (day/month)  
