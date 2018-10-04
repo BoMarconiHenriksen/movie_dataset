@@ -2,7 +2,7 @@
 
 https://github.com/MikkelHansen95/dataset  
 
-- [ ] How many movie are rated adult?  
+- [x] How many movie are rated adult?  
 
 - [ ] How many movies are listed as animation?  
 
