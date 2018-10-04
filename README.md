@@ -10,7 +10,7 @@ https://github.com/MikkelHansen95/dataset
 
 - [x] Which danish movie is most popular?  
 
-- [ ] Which english action movie had the biggest revenue?  
+- [x] Which english action movie had the biggest revenue?  
 
 - [ ] Plot histogram with number of movies according to release day for 'adult' and 'non adult' movies.   
 Mangler kun histogrammet!  
