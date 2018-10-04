@@ -3,6 +3,7 @@ import numpy as np
 import load_data
 import matplotlib.pyplot as plt
 # https://towardsdatascience.com/pandas-tips-and-tricks-33bcc8a40bb9
+# https://medium.com/dunder-data/selecting-subsets-of-data-in-pandas-39e811c81a0c
 
 
 def animated_movies():
@@ -38,7 +39,7 @@ def animated_movies():
     # Put the column with dates in one variable
     dato_series = pd.Series(animated[animated.columns[5]])
     # Count the same days
-    counts_the_date = pd.Series.value_counts(dato_series)
+    #counts_the_date = pd.Series.value_counts(dato_series)
     # print(counts_the_date)
     """ counts_the_date['release_date'] = pd.to_datetime(
         counts_the_date['release_date'])
@@ -48,27 +49,62 @@ def animated_movies():
     # * * * * * * *
     # KODEN INDEN FOR STJERNERNE VIRKER
 
-    # Convert strings to Date
-    animated['release_date'] = pd.to_datetime(
-        animated['release_date'], errors='coerce')
+    # Boolean selection
+    # Returns a boolean series
+    filter_true_values = animated['adult'] == 'True'
+    # print(filter_true_values)
+
+    # Select the true values and put it in a new list
+    true_values = animated[filter_true_values]
+    # print(len(true_values))
+
+    # The same as above in a one liner
+    #true_values = animated[animated['adult'] == 'True']
+    # print(len(true_values))
+    # print(true_values)
+
+    false_values = animated[animated['adult'] == 'False']
+    # print(len(false_values))
+    # print(false_values)
+
+    # Convert strings to Date for adult movies
+    true_values['release_date'] = pd.to_datetime(
+        true_values['release_date'], errors='coerce')
     # print(animated.info())
-    # print(animated['release_date'])
+    # print(true_values['release_date'])
+
+    # Convert strings to Date for non-adult movies
+    false_values['release_date'] = pd.to_datetime(
+        false_values['release_date'], errors='coerce')
+    # print(animated.info())
+    # print(false_values['release_date'])
 
     # Count same days. Index is now the date and the count is the value.
-    count_dates = animated.groupby('release_date').size()
-    # print(type(count_dates))
+    # Der er en adult movie uden data, derfor ryger vi ned på 8 adult movies.
+    true_values_count_dates = true_values.groupby('release_date').size()
+    # print(type(true_values_count_dates))
+    # print(len(true_values_count_dates))
+    # print(true_values_count_dates)
+
+    false_values_count_dates = false_values.groupby('release_date').size()
+    # print(false_values_count_dates)
 
     plot_file = 'movies_per_year.png'
 
-    plt.figure()
-    # count_dates.plot()
-    count_dates.hist()
+    # plt.figure()
+
+    # plt.figure()
+    # true_values_count_dates.plot()
+
+    #plt.plot(true_values_count_dates, marker='o', linestyle='--', color='r', label='Adult movies')
+    #plt.plot(false_values_count_dates, marker='*', linestyle='--', color='g', label='Non-adult movies')
+
     plt.show()
 
-    ax = count_dates.plot()
-    fig = ax.get_figure()
+    #ax = count_dates.plot()
+    #fig = ax.get_figure()
 
-    fig.savefig(plot_file)
+    # fig.savefig(plot_file)
 
 # * * * * * * *
 
