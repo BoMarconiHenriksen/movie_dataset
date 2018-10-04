@@ -15,8 +15,7 @@ def find_most_popular_danish_movie():
     #danish_movies.popularity = pd.to_numeric('popularity', errors='coerce').fillna(0).astype(np.int64)
 
     # Convert string to int
-    danish_movies['popularity'] = pd.to_numeric(
-        danish_movies['popularity'], errors='coerce')
+    danish_movies['popularity'] = pd.to_numeric(danish_movies['popularity'], errors='coerce')
 
     # Find the index number of max int
     index_number_most_popular = danish_movies['popularity'].idxmax()
