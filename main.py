@@ -1,8 +1,9 @@
+""" 
+The url to run this program:  https://raw.githubusercontent.com/MikkelHansen95/dataset/master/movies_metadata.csv
+"""
 import downloader
 import sys
+import os
 
 if __name__ == '__main__':
-    _, url = sys.argv
-    _, url, file_name = sys.argv
-
-file_name = downloader.download(url, to_file)
+    file_name = downloader.download_file()
