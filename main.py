@@ -8,6 +8,7 @@ import convert_csv
 import most_popular_danish_movie
 import english_action_movie
 import plot_reliase_and_runtime
+import animated_movies
 
 
 if __name__ == '__main__':
