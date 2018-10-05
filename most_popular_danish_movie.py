@@ -11,13 +11,12 @@ def find_most_popular_danish_movie(data):
     # print(data.columns)
 
     # We are going to work with columns 'original_language', 'popularity'
-    danish_movies = data[data['original_language'] == 'da']
+    danish_movies = data[data['original_language'] == 'da'].copy()
     #danish_movies.popularity = pd.to_numeric('popularity', errors='coerce').fillna(0).astype(np.int64)
 
     # Convert string to int
-    danish_movies['popularity'] = pd.to_numeric(
-        danish_movies['popularity'], errors='coerce')
-
+    danish_movies['popularity'] = pd.to_numeric(danish_movies['popularity'], errors='coerce').copy()
+    
     # Find the index number of max int
     index_number_most_popular = danish_movies['popularity'].idxmax()
 

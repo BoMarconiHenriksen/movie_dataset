@@ -10,7 +10,7 @@ def create_plot_realise_and_runtime(data):
     pd.set_option('display.max_columns', None)
 
     # ['release_date', 'runtime']
-    print(data.columns)
+    # print(data.columns)
 
     # Tjek at det er en data frame.
     # print(data.info())
@@ -28,5 +28,5 @@ def create_plot_realise_and_runtime(data):
     data['runtime'] = pd.to_numeric(data['runtime'], errors='coerce')
     # print(type(data['runtime']))
 
-    x = data['release_date'].sort_values()
-    print(x)
+    # x = data['release_date'].sort_values()
+    # print(x)

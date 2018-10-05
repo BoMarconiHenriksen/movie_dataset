@@ -18,12 +18,11 @@ def english_action_movie_with_biggest_revenue(data):
     action_movies_boolean = english_movies['genres'].str.contains('Action')
 
     # Select the true values and put it in a new list
-    action_movies = english_movies[action_movies_boolean]
+    action_movies = english_movies[action_movies_boolean].copy()
     # print(action_movies['genres'][45354])
 
     # Convert string to int
-    action_movies['revenue'] = pd.to_numeric(
-        action_movies['revenue'], errors='coerce')
+    action_movies['revenue'] = pd.to_numeric(action_movies['revenue'], errors='coerce').copy()
 
     index_number_biggest_revenue = action_movies['revenue'].idxmax()
     # print(index_number_biggest_revenue)

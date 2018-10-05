@@ -55,7 +55,7 @@ def plotting_adult_and_non_adult_movies(data):
     # print(filter_true_values)
 
     # Select the true values and put it in a new list
-    true_values = data[filter_true_values]
+    true_values = data[filter_true_values].copy()
     # print(len(true_values))
 
     # The same as above in a one liner
@@ -63,20 +63,18 @@ def plotting_adult_and_non_adult_movies(data):
     # print(len(true_values))
     # print(true_values)
 
-    false_values = data[data['adult'] == 'False']
+    false_values = data[data['adult'] == 'False'].copy()
     # print(len(false_values))
     # print(false_values)
 
     # Convert strings to Date for adult movies
-    true_values['release_date'] = pd.to_datetime(
-        true_values['release_date'], errors='coerce')
-    # print(animated.info())
+    true_values.loc['release_date'] = pd.to_datetime(true_values['release_date'], errors='coerce').copy()
+    # print(true_values.info())
     # print(true_values['release_date'])
 
     # Convert strings to Date for non-adult movies
-    false_values['release_date'] = pd.to_datetime(
-        false_values['release_date'], errors='coerce')
-    # print(animated.info())
+    false_values.loc['release_date'] = pd.to_datetime(false_values['release_date'], errors='coerce').copy()
+    # print(false_values.info())
     # print(false_values['release_date'])
 
     # Count same days. Index is now the date and the count is the value.
@@ -87,7 +85,7 @@ def plotting_adult_and_non_adult_movies(data):
     # print(true_values_count_dates)
 
     false_values_count_dates = false_values.groupby('release_date').size()
-    # print(false_values_count_dates)
+    #print(false_values_count_dates)
 
     # plot_file = 'movies_per_year.png'
 
