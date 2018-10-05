@@ -6,15 +6,15 @@ import matplotlib.pyplot as plt
 # https://medium.com/dunder-data/selecting-subsets-of-data-in-pandas-39e811c81a0c
 
 
-def animated_movies():
+def plotting_adult_and_non_adult_movies(data):
     #animated = load_data.load_movie_data('movies_metadata.csv', {}, {})
     """ 
     print(animated[100][0])
     print(animated[100][1])
     print(animated[100][2])
     print(animated[100][3]) """
-    animated = pd.read_csv('movies_metadata.csv', low_memory=False,  # dtype={"CallGuid": np.int64},
-                           usecols=[0, 2, 3, 7, 10, 14, 15, ], delimiter=',')  # , na_values=['no info', '.']
+    """ animated = pd.read_csv('movies_metadata.csv', low_memory=False,  # dtype={"CallGuid": np.int64},
+                           usecols=[0, 2, 3, 7, 10, 14, 15, ], delimiter=',') """  # , na_values=['no info', '.']
 
     # Gør at vi kan printe all kolonner.
     pd.set_option('display.max_columns', None)
@@ -37,7 +37,7 @@ def animated_movies():
     # print(animated['release_date'])
 
     # Put the column with dates in one variable
-    dato_series = pd.Series(animated[animated.columns[5]])
+    #dato_series = pd.Series(data[data.columns[5]])
     # Count the same days
     #counts_the_date = pd.Series.value_counts(dato_series)
     # print(counts_the_date)
@@ -51,11 +51,11 @@ def animated_movies():
 
     # Boolean selection
     # Returns a boolean series
-    filter_true_values = animated['adult'] == 'True'
+    filter_true_values = data['adult'] == 'True'
     # print(filter_true_values)
 
     # Select the true values and put it in a new list
-    true_values = animated[filter_true_values]
+    true_values = data[filter_true_values]
     # print(len(true_values))
 
     # The same as above in a one liner
@@ -63,7 +63,7 @@ def animated_movies():
     # print(len(true_values))
     # print(true_values)
 
-    false_values = animated[animated['adult'] == 'False']
+    false_values = data[data['adult'] == 'False']
     # print(len(false_values))
     # print(false_values)
 
@@ -89,7 +89,7 @@ def animated_movies():
     false_values_count_dates = false_values.groupby('release_date').size()
     # print(false_values_count_dates)
 
-    plot_file = 'movies_per_year.png'
+    # plot_file = 'movies_per_year.png'
 
     # plt.figure()
 
@@ -99,7 +99,7 @@ def animated_movies():
     #plt.plot(true_values_count_dates, marker='o', linestyle='--', color='r', label='Adult movies')
     #plt.plot(false_values_count_dates, marker='*', linestyle='--', color='g', label='Non-adult movies')
 
-    plt.show()
+    # plt.show()
 
     #ax = count_dates.plot()
     #fig = ax.get_figure()
