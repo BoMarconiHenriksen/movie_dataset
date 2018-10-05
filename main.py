@@ -5,6 +5,10 @@ import sys
 import os
 import downloader
 import convert_csv
+import most_popular_danish_movie
+import english_action_movie
+import plot_reliase_and_runtime
+
 
 if __name__ == '__main__':
     global file_name
