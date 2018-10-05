@@ -2,15 +2,15 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-def plot_realise_and_runtime():
-    data = pd.read_csv('movies_metadata.csv', low_memory=False,  # dtype={"CallGuid": np.int64},
-                       usecols=[14, 16], delimiter=',')  # , na_values=['no info', '.']
+def create_plot_realise_and_runtime(data):
+    """ data = pd.read_csv('movies_metadata.csv', low_memory=False,  # dtype={"CallGuid": np.int64},
+                       usecols=[14, 16], delimiter=',') """  # , na_values=['no info', '.']
 
     # Gør at vi kan printe all kolonner.
     pd.set_option('display.max_columns', None)
 
     # ['release_date', 'runtime']
-    print(data.columns)
+    # print(data.columns)
 
     # Tjek at det er en data frame.
     # print(data.info())
@@ -28,5 +28,5 @@ def plot_realise_and_runtime():
     data['runtime'] = pd.to_numeric(data['runtime'], errors='coerce')
     # print(type(data['runtime']))
 
-    x = data['release_date'].sort_values()
+    # x = data['release_date'].sort_values()
     # print(x)
