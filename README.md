@@ -1,7 +1,10 @@
 # Movie Dataset from Plain Product
 
 ## Documentation
-Analyzine the movie dataset from the groupe Plain Product. This is the link to the assignment https://github.com/MikkelHansen95/dataset/blob/master/README.md  
+Analyzine the movie dataset from the group Plain Product. This is the link to the assignment https://github.com/MikkelHansen95/dataset/blob/master/README.md  
+
+## Group
+Anders Nissen, Christian Lykke and Bo Henriksen.  
 
 ## How to run the project
 1. Clone the project  
