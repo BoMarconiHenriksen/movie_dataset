@@ -1,19 +1,33 @@
-from collections import Counter
 import pandas as pd
-from collections import defaultdict
-from collections import Counter
+import matplotlib.pyplot as plt
 
 
 def find_buzz_words(data):
     # Joins the words to 1 string, then split and count the values. Return a series.
-    word_count = pd.Series(' '.join(data['overview'].astype(str)).split()).value_counts()
-    most_used_words = word_count[:100]
-    print(most_used_words)
+    #word_count = pd.Series(' '.join(data['overview'].astype(str)).split()).value_counts()
+    #most_used_words = word_count[:100]
+    #print(most_used_words)
+
+    # Convert string to int. to_numeric converts to float. fillna sets empty values to 0.
+    data['revenue'] = pd.to_numeric(data['revenue'], errors='coerce').fillna(0).astype(int).copy()
+    #print(data['revenue'])
+
+    # Sort revenue column.
+    revenue_sorted = data.sort_values('revenue')
+    # print(revenue_sorted['revenue'])
+
+    # Convert string to int for budget.
+    data['budget'] = pd.to_numeric(data['budget'], errors='coerce').fillna(0).astype(int).copy()
+    # print(data['budget'])
+
+    # Budget sorted
+    budget_sorted = data.sort_values('budget')
+    print(budget_sorted['budget'])
+
+    #ax = revenue_sorted.plot(kind='scatter', x = 'revenue', y=budget_sorted['budget'])
+    
+    
 
 
-    #  Det virker til at denne her metode tager længere tid end join metoden.
-    # Expand the splitted strings into separate columns. Multidimentionally.
-    # Stack the prescribed level(s) from columns to index.
-    # value_counts: Returns object containing counts of unique values.
-    #d = data['overview'].str.split(expand=True).stack().value_counts()
-    # print(d)
+    #plt.show()
+
