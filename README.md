@@ -1,6 +1,17 @@
-# Movie Dataset
+# Movie Dataset from Plain Product
 
-https://github.com/MikkelHansen95/dataset  
+## Documentation
+Analyzine the movie dataset from the groupe Plain Product. This is the link to the assignment https://github.com/MikkelHansen95/dataset/blob/master/README.md  
+
+## How to run the project
+1. Clone the project  
+2. Cd into the directory of the project  
+3. To run the project you need to paste this url to the dataset as a parameter https://www.kaggle.com/rounakbanik/the-movies-dataset#movies_metadata.csv  
+4. Example of how to run the project  
+5. python main.py [<url_to_dataset>]  
+
+## Dependencies
+The project does only use dependencies which is part of Pythons Anaconda installation.  
 
 ## Results
 - [x] How many movie are rated adult?  
