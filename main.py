@@ -3,13 +3,13 @@ The url to run this program use this url:  https://raw.githubusercontent.com/Mik
 """
 import downloader
 import convert_csv
-import lib.popular_danish_movie as popular_danish_movie
-import lib.english_action_movie as english_action_movie
-import lib.plot_reliase_and_runtime as reliase_and_runtime
-import lib.plot_adult_movies as plot_adult_movies
-import lib.buzz_words as buzz_words
-import lib.animated_movies as animated_movies
-import lib.highest_budget as highest_budget
+import library.popular_danish_movie as popular_danish_movie
+import library.english_action_movie as english_action_movie
+import library.plot_reliase_and_runtime as reliase_and_runtime
+import library.plot_adult_movies as plot_adult_movies
+import library.buzz_words as buzz_words
+import library.animated_movies as animated_movies
+import library.highest_budget as highest_budget
 
 if __name__ == '__main__':
     global file_name
