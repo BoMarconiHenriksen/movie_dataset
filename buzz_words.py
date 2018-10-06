@@ -18,7 +18,8 @@ def find_buzz_words(data):
     data['split_words'] = data['overview'].str.split(' ')
     # print(type(data))
     # print(data.columns)
-    
+    dates = data.groupby('split_words').size()
+    print(dates)
     #counts = data['split_words'].value_counts()#.to_dict()
     #print(counts)
     # print(data['split_words'])
