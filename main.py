@@ -17,10 +17,10 @@ if __name__ == '__main__':
 
 data = convert_csv.convert_csv_to_dataframe(file_name)
 
-convert_csv.reader(data)
+#convert_csv.reader(data)
 
 
-""" print(plot_adult_movies.plotting_adult_and_non_adult_movies(data)) # With plot
+print(plot_adult_movies.plotting_adult_and_non_adult_movies(data)) # With plot
 print(animated_movies.find_number_of_animated_movies(data))
 print(highest_budget.find_highest_budget(data))
 print(popular_danish_movie.find_most_popular_danish_movie(data))
@@ -28,4 +28,4 @@ print(english_action_movie.english_action_movie_with_biggest_revenue(data))
 
 # Plots - Der er lavet dataframes men plot mangler.
 reliase_and_runtime.create_plot_realise_and_runtime(data)
-buzz_words.find_buzz_words(data) """
+buzz_words.find_buzz_words(data)
