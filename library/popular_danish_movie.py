@@ -9,13 +9,8 @@ def find_most_popular_danish_movie(data):
     # Find all the danish movies.
     danish_movies = data[data['original_language'] == 'da'].copy()
 
-    # Convert string to int and replace .
-    danish_movies['popularity'] = pd.to_numeric(danish_movies['popularity'].str.replace(
-        '.', ''), errors='coerce').fillna(0).astype(int).copy()
-
     # Find the index number of the highest int in popularity.
     index_number_most_popular = danish_movies['popularity'].idxmax()
-
     
     most_popular_rating = danish_movies['popularity'][index_number_most_popular]
     most_popular_title = danish_movies['original_title'][index_number_most_popular]

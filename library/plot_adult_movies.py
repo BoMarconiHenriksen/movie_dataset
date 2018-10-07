@@ -16,15 +16,8 @@ def plotting_adult_and_non_adult_movies(data):
     # The same as above in a one liner for non adult movies.
     non_adult_movies = data[data['adult'] == 'False'].copy()
 
-    # Convert strings to Date for adult movies
-    adult_movies.loc['release_date'] = pd.to_datetime(adult_movies['release_date'], errors='coerce').copy()
-
-    # Convert strings to Date for non-adult movies
-    non_adult_movies.loc['release_date'] = pd.to_datetime(
-        non_adult_movies['release_date'], errors='coerce').copy()
-
     # Count same days. Index is now the date and the count is the value.
-    # Der er en adult movie uden data, derfor ryger vi ned på 8 adult movies.
+    # Der er en adult movie uden date, derfor ryger vi ned på 8 adult movies.
     adult_movies_count_dates = adult_movies.groupby('release_date').size()
     non_adult_movies_count_dates = non_adult_movies.groupby('release_date').size()
     
