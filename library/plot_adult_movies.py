@@ -13,11 +13,11 @@ def plotting_adult_and_non_adult_movies(data):
     filter_true_values = data['adult'] == 'True'
    
     # Select the true values and put it in a new list
-    adult_movies = data[filter_true_values].copy()
+    adult_movies = data[filter_true_values]
     number_of_adult_movies = (len(adult_movies))
 
     # The same as above in a one liner for non adult movies.
-    non_adult_movies = data[data['adult'] == 'False'].copy()
+    non_adult_movies = data[data['adult'] == 'False']
 
     # Count same days. Index is now the date and the count is the value.
     # Der er en adult movie uden date, derfor ryger vi ned på 8 adult movies.
