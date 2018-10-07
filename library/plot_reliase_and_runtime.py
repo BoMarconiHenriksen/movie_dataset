@@ -3,17 +3,31 @@ import matplotlib.pyplot as plt
 
 
 def create_plot_realise_and_runtime(data):
-
+    '''
+    This method plots the release date and runtime of the movies in the dataset.
+    '''
     # Gør at vi kan printe all kolonner.
     pd.set_option('display.max_columns', None)
-
-    #Convert strings to Date for adult movies
-    data['release_date'] = pd.to_datetime(data['release_date'], errors='coerce')
-
-    # Convert strings to int
-    data['runtime'] = pd.to_numeric(data['runtime'], errors='coerce').fillna(0).astype(int)
     
-    # Runtime sorted
-    runtime_sorted = data.sort_values('runtime')
+    # Sorted by runtime 
+    # data = data.sort_values('runtime')
     
-    #print(runtime_sorted['runtime'])
+    #print(data['runtime'])
+
+    #plot_file = 'release_date.png'
+
+    #data_to_be_plotted = pd.concat([data['release_date'], runtime_sorted ], axis=1, keys=['Non Adult Movies','Adult Movies'])
+    #data.plot.scatter(x='runtime',y='release_date')
+        
+    # For tests.
+    # plt.show()
+    
+    """ ax = data.plot()
+    ax.set_title('Release Date and Runtime')
+    ax.legend(loc='upper center')
+    ax.set_ylabel('Release Date')
+    ax.grid(False) """ # Get som space just below 0 on x axe.
+    
+    #fig = ax.get_figure()
+
+    #fig.savefig(plot_file)

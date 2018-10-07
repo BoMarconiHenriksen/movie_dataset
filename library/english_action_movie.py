@@ -2,7 +2,9 @@ import pandas as pd
 
 
 def english_action_movie_with_biggest_revenue(data):
-
+    '''
+    This method find the english action mmovie with the biggest revenue.
+    '''
     # Gør at vi kan printe all kolonner.
     pd.set_option('display.max_columns', None)
 
@@ -14,10 +16,6 @@ def english_action_movie_with_biggest_revenue(data):
 
     # Select the true values and put it in a new list
     action_movies = english_movies[action_movies_boolean].copy()
-    
-    # Convert string to int
-    action_movies['revenue'] = pd.to_numeric(
-        action_movies['revenue'], errors='coerce').fillna(0).astype(int).copy()
 
     index_number_biggest_revenue = action_movies['revenue'].idxmax()
 
