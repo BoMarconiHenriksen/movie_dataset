@@ -9,7 +9,7 @@ def find_most_popular_danish_movie(data):
     pd.set_option('display.max_columns', None)
 
     # Find all the danish movies.
-    danish_movies = data[data['original_language'] == 'da'].copy()
+    danish_movies = data[data['original_language'] == 'da']
 
     # Find the index number of the highest int in popularity.
     index_number_most_popular = danish_movies['popularity'].idxmax()

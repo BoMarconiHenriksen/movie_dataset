@@ -15,7 +15,7 @@ def english_action_movie_with_biggest_revenue(data):
     action_movies_boolean = english_movies['genres'].str.contains('Action')
 
     # Select the true values and put it in a new list
-    action_movies = english_movies[action_movies_boolean].copy()
+    action_movies = english_movies[action_movies_boolean]
 
     index_number_biggest_revenue = action_movies['revenue'].idxmax()
 
