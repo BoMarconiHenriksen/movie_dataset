@@ -30,11 +30,18 @@ def plotting_adult_and_non_adult_movies(data):
     
     plot_file = 'movies_per_year.png'
 
-    non_adult_movies_count_dates.plot()
-
+    data_to_be_plotted = pd.concat([non_adult_movies_count_dates, adult_movies_count_dates], axis=1, keys=['Non Adult Movies','Adult Movies'])
+    data_to_be_plotted.plot()
+        
+    # For tests.
     # plt.show()
-
-    ax = non_adult_movies_count_dates.plot()
+    
+    ax = data_to_be_plotted.plot()
+    ax.set_title('Adult and Non Adult Movies')
+    ax.legend(loc='upper center')
+    ax.set_ylabel('Number of Movies')
+    ax.grid(False) # Get som space just below 0 on x axe.
+    
     fig = ax.get_figure()
 
     fig.savefig(plot_file)
