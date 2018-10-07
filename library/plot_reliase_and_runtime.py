@@ -3,7 +3,9 @@ import matplotlib.pyplot as plt
 
 
 def create_plot_realise_and_runtime(data):
-
+    '''
+    This method plots the release date and runtime of the movies in the dataset.
+    '''
     # Gør at vi kan printe all kolonner.
     pd.set_option('display.max_columns', None)
     

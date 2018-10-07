@@ -2,7 +2,9 @@ import pandas as pd
 
 
 def english_action_movie_with_biggest_revenue(data):
-
+    '''
+    This method find the english action mmovie with the biggest revenue.
+    '''
     # Gør at vi kan printe all kolonner.
     pd.set_option('display.max_columns', None)
 

@@ -1,7 +1,9 @@
 import pandas as pd
 
 def find_highest_budget(data):
-
+    '''
+    This method find the movie with the highest budget.
+    '''
     index_number_highest_budget = data['budget'].idxmax()
     
     # Find the revenue and title of the movie with highest budget.

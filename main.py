@@ -17,9 +17,6 @@ if __name__ == '__main__':
 
 data = convert_csv.convert_csv_to_dataframe(file_name)
 
-#convert_csv.reader(data)
-
-
 print(plot_adult_movies.plotting_adult_and_non_adult_movies(data)) # With plot
 print(animated_movies.find_number_of_animated_movies(data))
 print(highest_budget.find_highest_budget(data))

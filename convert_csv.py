@@ -3,6 +3,10 @@ import pandas as pd
 # Returneres som en dataframe. 
 # low_memory=False because column 10 has mixed datatypes.
 def convert_csv_to_dataframe(file_name):
+    '''
+    This method read the csv file and convert it to a dataframe. 
+    When it's done it change the date to a date time object and some of the columns to integers.
+    '''
     data = pd.read_csv(file_name, sep=',', usecols=[0, 2, 3, 7, 8, 9, 10, 14, 15, 16], low_memory=False) 
     
     # Convert string to datetime

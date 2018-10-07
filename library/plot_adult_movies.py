@@ -5,7 +5,10 @@ import matplotlib
 
 
 def plotting_adult_and_non_adult_movies(data):
-
+    '''
+    This method find the number of adult movies in the dataset 
+    and plot both adult movies and non-adult movies.
+    '''
     # Boolean selection. Returns a boolean series
     filter_true_values = data['adult'] == 'True'
    

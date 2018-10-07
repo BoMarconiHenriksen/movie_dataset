@@ -2,7 +2,9 @@ import pandas as pd
 
 
 def find_most_popular_danish_movie(data):
-
+    '''
+    This method find the most popular danish movie of all time.
+    '''
     # Gør at vi kan printe all kolonner.
     pd.set_option('display.max_columns', None)
 
