@@ -30,7 +30,7 @@ def plotting_adult_and_non_adult_movies(data):
     
     plot_file = 'movies_per_year.png'
 
-    data_to_be_plotted = pd.concat([non_adult_movies_count_dates, adult_movies_count_dates], axis=1, keys=['Non Adult Movies','Adult Movies'])
+    data_to_be_plotted = pd.concat([non_adult_movies_count_dates, adult_movies_count_dates], sort=True, axis=1, keys=['Non Adult Movies','Adult Movies'])
     data_to_be_plotted.plot()
         
     # For tests.
