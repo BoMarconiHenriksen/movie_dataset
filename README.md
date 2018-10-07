@@ -32,11 +32,12 @@ The most popular danish movie is: Fasandræberne. The rating is: 12635996.
 - [x] Which english action movie had the biggest revenue?  
 The english action movie with the biggest revenue is: Star Wars: The Force Awakens. The revenue was: 2068223624.  
 
-- [ ] Plot histogram with number of movies according to release day for 'adult' and 'non adult' movies.   
-Mangler kun histogrammet!  
+- [x] Plot histogram with number of movies according to release day for 'adult' and 'non adult' movies.   
 Plot via 2 series objects.  
 x-axis: release date (day/month)  
 y-axis: number of movies   
+
+![alt text](https://github.com/BoMarconiHenriksen/movie_dataset/blob/developer/movies_per_year.png)  
 
 - [ ] Scatter-Plot with runtime as y value and release date as x value.  
 Vi mangler kun plottet!  
