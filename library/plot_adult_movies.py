@@ -24,7 +24,7 @@ def plotting_adult_and_non_adult_movies(data):
         non_adult_movies['release_date'], errors='coerce').copy()
 
     # Count same days. Index is now the date and the count is the value.
-    # Der er en adult movie uden data, derfor ryger vi ned på 8 adult movies.
+    # Der er en adult movie uden date, derfor ryger vi ned på 8 adult movies.
     adult_movies_count_dates = adult_movies.groupby('release_date').size()
     non_adult_movies_count_dates = non_adult_movies.groupby('release_date').size()
     
