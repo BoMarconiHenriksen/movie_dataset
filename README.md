@@ -10,6 +10,7 @@ Anders Nissen, Christian Lykke and Bo Henriksen.
 1. Clone the project  
 2. Cd into the directory of the project  
 3. To run the project you need to paste this url to the dataset as a parameter https://raw.githubusercontent.com/MikkelHansen95/dataset/master/movies_metadata.csv  
+
 4. Example of how to run the project  
 5. python main.py [<url_to_dataset>]  
 
